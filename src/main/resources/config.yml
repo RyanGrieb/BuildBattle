@@ -1,0 +1,99 @@
+mongo:
+    host: '66.55.138.243'
+    port: 27017
+    database: 'minecraft'
+    username: 'sweguser'
+    password: 'FW4FqJkYDnKlm9BV7V0z'
+MaxPlayers: 9
+MaxPlayersReady: 3
+LobbyCooldown: 21
+PlotSpacing: 34
+Game:
+   BuildTime: 300
+   JudgeTime: 15
+   DefaultXP: 10
+Server:
+   id: UNKNOWN-1
+   name: Unknown 1
+   ip: 127.0.1.1
+   port: 25565
+Hub:
+   x: 5000
+   y: 76
+   z: 5000
+Villager:
+  x: 4
+  y: -1
+  z: 4
+  yaw: 135
+TopLeftPlot:
+   x: 136
+   y: 87
+   z: 74
+Builds:
+   Fruits:
+     - Apple
+     - Banana
+     - Pear
+     - Kiwi
+     - Peach
+     - Strawberry
+     - Mango
+     - Grapes
+     - Pineapple
+     - Orange
+   Breakfast:
+     - Eggs
+     - Toast
+     - Pancakes
+     - Syrrup
+     - Bacon
+     - Muffin
+   Dinner:
+     - Steak
+     - Pizza
+     - Meat
+     - Chinese Food
+     - Indian Food
+     - Sushi
+     - Burger
+     - Lobster
+     - Potato
+     - Asparagus
+   Animals:
+     - Cow
+     - Sheep
+     - Pig
+     - Squirrel
+     - Donkey
+     - Horse
+     - Chipmunk
+     - Dog
+     - Cat
+     - Mouse
+     - Chicken
+     - Bluejay
+     - Eagle
+     - Goldfish
+     - Pufferfish
+   Landscape:
+     - Desert
+     - Jungle
+     - Ocean
+     - Beach
+     - Forest
+     - Hills
+     - Plains
+     - Scorched Earth
+     - Alien Lands
+   Medieval:
+     - Castle
+     - Fort
+     - Tower
+     - Siege
+     - Wall
+     - Pallisades
+     - Moat
+     - Citadel
+     - Great Hall
+   

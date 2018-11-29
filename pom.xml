@@ -1,0 +1,90 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>me.Rhin</groupId>
+	<artifactId>BuildBattleCore</artifactId>
+	<version>2.0-Alpha</version>
+	<name>MCNations-BB</name>
+
+	<properties>
+		<project.mainClass>net.mcnations.bb.BuildBattle</project.mainClass>
+		<project.author>Rhin</project.author>
+	</properties>
+
+	<repositories>
+		<repository>
+			<id>sanjay900-repo</id>
+			<url>http://ci.eyrenetwork.net/plugin/repository/everything/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.mcnations.core</groupId>
+			<artifactId>core</artifactId>
+			<version>0.1-ALPHA</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.github.filoghost</groupId>
+			<artifactId>HolographicDisplays</artifactId>
+			<version>87bc0922ed</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.wacos</groupId>
+			<artifactId>nametagedit</artifactId>
+			<version>3.0-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<directory>${basedir}/target</directory>
+		<resources>
+			<resource>
+				<targetPath>.</targetPath>
+				<filtering>true</filtering>
+				<directory>${basedir}/src/main/resources</directory>
+				<includes>
+					<include>**</include>
+				</includes>
+			</resource>
+		</resources>
+		<finalName>${project.name}</finalName>
+		<defaultGoal>clean install</defaultGoal>
+		<!-- Plugins -->
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.4</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<showWarnings>true</showWarnings>
+					<showDeprecation>false</showDeprecation>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<version>2.3</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<artifactSet>
+								<includes>
+									<include>net.mcnations.core:core</include>
+								</includes>
+							</artifactSet>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>
